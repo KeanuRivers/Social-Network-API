@@ -1,29 +1,34 @@
-// Requirements
-const mongoose = require('mongoose');
+const User = require('./User');
+const Thoughts = require('./Thought');
 
-const Schema = mongoose.Schema;
+module.exports = { User, Thoughts }
 
-// Creation of the new schema and collections:
-const SocialAPI = new Schema([
-    {
-        user: { type: String, required: true}, 
-            userName: String,
-            email: String,
+// // Requirements
+// const mongoose = require('mongoose');
 
-        // lastAccessed: { type: Date, default: Date.now }    
-    },
-    {
-        Thought: 
-            {
-                thoughtText: { type: String, required: true},
-                createdAt: { type: Date, default: Date.now },
-                userName: { type: String, required: true}
-            }
-    }
-]);
-// End Schema and collections.
+// const Schema = mongoose.Schema;
 
-const social = mongoose.model("Social", SocialAPI);
+// // Creation of the new schema and collections:
+// const SocialAPI = new Schema([
+//     {
+//         user: { type: String, required: true}, 
+//             userName: String,
+//             email: String,
 
-// Required to export file:
-module.exports = social;
+//         // lastAccessed: { type: Date, default: Date.now }    
+//     },
+//     {
+//         Thought: 
+//             {
+//                 thoughtText: { type: String, required: true},
+//                 createdAt: { type: Date, default: Date.now },
+//                 userName: { type: String, required: true}
+//             }
+//     }
+// ]);
+// // End Schema and collections.
+
+// const social = mongoose.model("Social", SocialAPI);
+
+// // Required to export file:
+// module.exports = social;
