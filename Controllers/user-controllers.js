@@ -1,4 +1,4 @@
-const { User, Thoughts } = require('../models');
+const { User, Thoughts } = require('../models/socialModel');
 
 const userController = {
     // get all users
